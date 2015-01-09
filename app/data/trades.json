@@ -1,0 +1,72 @@
+[
+  {
+    "broker": "TD",
+    "open_date": "12/29/2014",
+    "ticker": "LVS",
+    "exp_date": "01/17/2015",
+    "dte": 20,
+    "bull_bear": "bull",
+    "strategy": "618 bounce",
+    "trx_type": "sell_open",
+    "entry_price": 0.55,
+    "qty": 4,
+    "credit_debit_amount": 250,
+    "max_profit": 250,
+    "spread_width": 1,
+    "max_loss": 300,
+    "description": "SOLD -4 VERTICAL LVS 100 JAN 15 58/59 CALL @ .55 ISE"
+  },
+  {
+    "broker": "TD",
+    "open_date": "12/29/2014",
+    "ticker": "LVS",
+    "exp_date": "01/17/2015",
+    "dte": 20,
+    "bull_bear": "bull",
+    "strategy": "618 bounce",
+    "trx_type": "sell_open",
+    "entry_price": 0.55,
+    "qty": 4,
+    "credit_debit_amount": 250,
+    "max_profit": 250,
+    "spread_width": 1,
+    "max_loss": 300,
+    "description": "SOLD -4 VERTICAL LVS 100 JAN 15 58/59 CALL @ .55 ISE"
+  },
+
+  {
+    "broker": "ET",
+    "open_date": "12/29/2014",
+    "ticker": "GOOGL",
+    "exp_date": "01/17/2015",
+    "dte": 20,
+    "bull_bear": "bull",
+    "strategy": "618 bounce",
+    "trx_type": "sell_open",
+    "entry_price": 0.55,
+    "qty": 4,
+    "credit_debit_amount": 250,
+    "max_profit": 250,
+    "spread_width": 1,
+    "max_loss": 300,
+    "description": "SOLD -4 VERTICAL LVS 100 JAN 15 58/59 CALL @ .55 ISE"
+  },
+  {
+    "broker": "TS",
+    "open_date": "2/29/2014",
+    "ticker": "MSFT",
+    "exp_date": "01/17/2015",
+    "dte": 20,
+    "bull_bear": "bull",
+    "strategy": "618 bounce",
+    "trx_type": "sell_open",
+    "entry_price": 0.55,
+    "qty": 4,
+    "credit_debit_amount": 250,
+    "max_profit": 250,
+    "spread_width": 1,
+    "max_loss": 300,
+    "description": "SOLD -4 VERTICAL LVS 100 JAN 15 58/59 CALL @ .55 ISE"
+  }
+
+]
