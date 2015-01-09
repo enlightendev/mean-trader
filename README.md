@@ -9,6 +9,9 @@
 4 - removed yeoman default genereated crap.
 5 - added ui router `bower install angular-ui-router`
   - see here for vids --> https://github.com/angular-ui/ui-router
+6 - added smart table
+  - http://lorenzofox3.github.io/smart-table-website/
+  
 
 
 

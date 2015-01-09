@@ -1,10 +1,27 @@
-<div ng-repeat="trade in trades">
-  broker: {{trade.broker}}
-  ticker: {{trade.ticker}}
-  price: {{trade.entry_price}}
-  spread_width: <span class="glyphicon glyphicon-thumbs-up"
-                      ng-click="increaseSpread(trade)">{{trade.spread_width}}</span>
-</div>
+
+<table st-table="trades" class="table table-striped">
+  <thead>
+  <tr>
+    <th st-sort="broker">Broker</th>
+    <th st-sort="ticker">Ticker</th>
+    <th>Entry Price</th>
+    <th>Spread</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="trade in trades">
+    <td>{{trade.broker}}</td>
+    <td>{{trade.ticker}}</td>
+    <td>{{trade.entry_price | currency}}</td>
+    <td>
+      <span class="glyphicon glyphicon-thumbs-up" ng-click="increaseSpread(trade)">
+        {{trade.spread_width | currency}}
+      </span>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
 <h1 id="formTitle" class="animated">Add Trade</h1>
 <form class="form-horizontal" ng-submit="addTrade()">
   <div class="form-group">

@@ -10,7 +10,7 @@
  */
 angular
   .module('meanTraderApp', [
-    'ngResource','ui.router'
+    'ngResource','ui.router','smart-table'
   ])
 
   .config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
