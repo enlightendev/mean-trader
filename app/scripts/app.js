@@ -20,7 +20,13 @@ angular
         url: '/home',
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
-      });
+      })
+      .state('trade', {
+        url: '/trade/{id}',
+        templateUrl: 'views/trade.html',
+        controller: 'TradeCtrl'
+      })
+    ;
 
     $urlRouterProvider.otherwise('home');
 

@@ -10,7 +10,7 @@
   </thead>
   <tbody>
   <tr ng-repeat="trade in trades">
-    <td>{{trade.broker}}</td>
+    <td><a href="#/trade/{{$index}}">{{trade.broker}}</a></td>
     <td>{{trade.ticker}}</td>
     <td>{{trade.entry_price | currency}}</td>
     <td>
