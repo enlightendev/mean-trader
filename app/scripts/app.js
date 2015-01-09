@@ -10,5 +10,18 @@
  */
 angular
   .module('meanTraderApp', [
-    'ngResource'
-  ]);
+    'ngResource','ui.router'
+  ])
+
+  .config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+
+    $stateProvider
+      .state('home', {
+        url: '/home',
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
+      });
+
+    $urlRouterProvider.otherwise('home');
+
+  }]);
