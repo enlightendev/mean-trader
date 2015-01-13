@@ -4,33 +4,84 @@
     <meta charset="utf-8">
     <title>Mean Trader</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
 
+
+    <!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/smartadmin-skins.min.css">
+
+    <!-- SmartAdmin RTL Support is under construction-->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/smartadmin-rtl.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css" />
     <link rel="stylesheet" href="styles/main.css">
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+    <!-- Specifying a Webpage Icon for Web Clip
+             Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+    <link rel="apple-touch-icon" href="images/splash/sptouch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/splash/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/splash/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/splash/touch-icon-ipad-retina.png">
+
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Startup image for web apps -->
+    <link rel="apple-touch-startup-image" href="images/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="images/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="images/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+
     <!-- endbuild -->
   </head>
-  <body ng-app="meanTraderApp" ng-controller="MainCtrl">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <body class="" ng-app="meanTraderApp" ng-controller="MainCtrl">
+  <!-- POSSIBLE CLASSES: minified, fixed-ribbon, fixed-header, fixed-width, top-menu
+           You can also add different skin classes such as "smart-skin-0", "smart-skin-1" etc...-->
 
-    <div class="page-header">
-      <h1 id="title" class="animated fadeIn">{{appName}}</h1>
-    </div>
+  <!-- HEADER -->
+  <header id="header" data-ng-include="'includes/header.html'"></header>
+  <!-- END HEADER -->
 
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <ui-view></ui-view>
-      </div>
-    </div>
+  <!-- Left panel : Navigation area -->
+  <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+  <aside id="left-panel"><span data-ng-include="'includes/left-panel.html'"></span></aside>
+  <!-- END NAVIGATION -->
+
+  <!-- MAIN PANEL -->
+  <div id="main" role="main">
+
+
+    <!-- MAIN CONTENT -->
+
+    <ui-view></ui-view>
+    <!-- END MAIN CONTENT -->
+
+  </div>
+  <!-- END MAIN PANEL -->
+
+    <!-- PAGE FOOTER -->
+    <div class="page-footer"><span data-ng-include="'includes/footer.html'"></span></div>
+    <!-- END FOOTER -->
+
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -47,15 +98,27 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-smart-table/dist/smart-table.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/home.js"></script>
-        <script src="scripts/controllers/trade.js"></script>
-        <script src="scripts/services/tradesService.js"></script>
-        <!-- endbuild -->
+    <!-- MAIN APP JS FILE -->
+    <script src="js/app.js"></script>
+
+    <!-- MAIN APP JS FILE -->
+    <script src="js/app.config.js"></script>
+  <!-- JARVIS WIDGETS -->
+  <script src="js/smartwidgets/jarvis.widget.min.js"></script>
+
+    <script src="scripts/ng-app.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/trade.js"></script>
+    <script src="scripts/directives/navigation.js"></script>
+    <script src="scripts/services/tradesService.js"></script>
+    <!-- endbuild -->
+
 </body>
 </html>
