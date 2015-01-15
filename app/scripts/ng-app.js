@@ -21,10 +21,15 @@ angular
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
       })
-      .state('trade', {
-        url: '/trade/{id}',
-        templateUrl: 'views/trade.html',
-        controller: 'TradeCtrl'
+      .state('trades', {
+        url: '/trades',
+        templateUrl: 'views/trades/trades-list.html',
+        controller: 'TradesCtrl'
+      })
+      .state('scratch', {
+        url: '/scratch',
+        templateUrl: 'views/scratch/accordion.html',
+        controller: 'AccordionDemoCtrl'
       })
     ;
 
