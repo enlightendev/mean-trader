@@ -16,10 +16,10 @@ angular
   .config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
     $stateProvider
-      .state('home', {
-        url: '/home',
-        templateUrl: 'views/home.html',
-        controller: 'HomeCtrl'
+      .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardCtrl'
       })
       .state('trades', {
         url: '/trades',
@@ -33,6 +33,6 @@ angular
       })
     ;
 
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('dashboard');
 
   }]);

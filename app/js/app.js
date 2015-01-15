@@ -104,6 +104,7 @@ var calc_navbar_height = function() {
  */
 if ($('body').hasClass("menu-on-top") || localStorage.getItem('sm-setmenu')=='top' ) {
 	topmenu = true;
+  alert('menu on top');
 	$('body').addClass("menu-on-top");
 }
 /* ~ END: CHECK MOBILE DEVICE */

@@ -12,7 +12,7 @@
     "qty": 4,
     "credit_debit_amount": 250,
     "max_profit": 250,
-    "spread_width": 1,
+    "spreadWidth": 1,
     "max_loss": 300,
     "description": "SOLD -4 VERTICAL LVS 100 JAN 15 58/59 CALL @ .55 ISE"
   },
@@ -29,7 +29,7 @@
     "qty": 4,
     "credit_debit_amount": 250,
     "max_profit": 250,
-    "spread_width": 1,
+    "spreadWidth": 1,
     "max_loss": 300,
     "description": "SOLD -4 VERTICAL LVS 100 JAN 15 58/59 CALL @ .55 ISE"
   },
@@ -47,7 +47,7 @@
     "qty": 4,
     "credit_debit_amount": 250,
     "max_profit": 250,
-    "spread_width": 1,
+    "spreadWidth": 1,
     "max_loss": 300,
     "description": "SOLD -4 VERTICAL LVS 100 JAN 15 58/59 CALL @ .55 ISE"
   },
@@ -64,7 +64,7 @@
     "qty": 4,
     "credit_debit_amount": 250,
     "max_profit": 250,
-    "spread_width": 1,
+    "spreadWidth": 1,
     "max_loss": 300,
     "description": "SOLD -4 VERTICAL LVS 100 JAN 15 58/59 CALL @ .55 ISE"
   }

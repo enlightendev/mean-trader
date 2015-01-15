@@ -1,6 +1,8 @@
 // directives for navigation
 angular.module('meanTraderApp')
+
   .directive('navigation', function() {
+
     return {
       restrict: 'AE',
       controller: ['$scope', function($scope) {
@@ -22,7 +24,7 @@ angular.module('meanTraderApp')
           }
         }
 
-        // SLIMSCROLL FOR NAV
+        // TODO: can we remove this --- SLIMSCROLL FOR NAV
         if ($.fn.slimScroll) {
           element.slimScroll({
             height: '100%'
@@ -38,6 +40,7 @@ angular.module('meanTraderApp')
   })
 
   .controller('NavGroupController', ['$scope', function($scope) {
+
     $scope.active = false;
     $scope.hasIcon = angular.isDefined($scope.icon);
     $scope.hasIconCaption = angular.isDefined($scope.iconCaption);
@@ -109,15 +112,22 @@ angular.module('meanTraderApp')
       },
       link: function(scope, element, attrs, parentCtrls) {
         var navCtrl = parentCtrls[0],
-          navgroupCtrl = parentCtrls[1]
+            navgroupCtrl = parentCtrls[1];
 
         scope.$watch('active', function(newVal, oldVal) {
           if (newVal) {
-            if (angular.isDefined(navgroupCtrl)) navgroupCtrl.setActive(true);
+
+            if (angular.isDefined(navgroupCtrl)) {
+              navgroupCtrl.setActive(true);
+            }
+
             $window.document.title = scope.title;
+
             scope.setBreadcrumb();
           } else {
-            if (angular.isDefined(navgroupCtrl)) navgroupCtrl.setActive(false);
+            if (angular.isDefined(navgroupCtrl)) {
+              navgroupCtrl.setActive(false);
+            }
           }
         });
 

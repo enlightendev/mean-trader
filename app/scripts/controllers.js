@@ -19,7 +19,7 @@ angular.module('meanTraderApp')
   })
 
 
-  .controller('HomeCtrl', function ($scope, tradesService) {
+  .controller('DashboardCtrl', function ($scope, tradesService) {
 
   })
 
@@ -30,7 +30,7 @@ angular.module('meanTraderApp')
     });
 
     $scope.increaseSpread = function (trade) {
-      trade.spread_width += 1;
+      trade.spreadWidth += 1;
     };
 
     $scope.addTrade = function () {
@@ -38,7 +38,7 @@ angular.module('meanTraderApp')
         {
           broker: $scope.broker,
           ticker: $scope.ticker,
-          spread_width: 0
+          spreadWidth: 0
         }
       );
     };
