@@ -38,6 +38,7 @@ angular.module('meanTraderApp')
         {
           broker: $scope.broker,
           ticker: $scope.ticker,
+          dte: $scope.dte,
           spreadWidth: 0
         }
       );
